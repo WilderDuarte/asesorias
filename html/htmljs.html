@@ -30,11 +30,11 @@
         <div class="form">
             <div class="row">
                 <label for="">Date One</label>
-                <input type="text" id="text_one" onblur="salida()">
+                <input type="text" id="text_one">
             </div>
             <div class="row">
                 <label for="">Date Two</label>
-                <input type="text" id="text_two" onblur="salida()">
+                <input type="text" id="text_two" >
             </div>
             <div class="row">
                 <button onclick="calcular()">CALCULAR</button>
@@ -46,19 +46,20 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js.js"></script>
+    <script src="../js/js.js"></script>
     <script>
         // tipos de variables => const - var - let
         // tipos de datos => numéricos - booleanos - string - arrays
         // operadores básicos => + - * / %
 
-        var text_one = document.getElementById("text_one").value;
-        var text_two = document.getElementById("text_two").value;
+        var text_one = document.getElementById("text_one");
+        var text_two = document.getElementById("text_two");
 
         function calcular(){
             // Swal.fire(text_one + " " + text_two);
             // var rta = "Mi nombre es: " + text_one + " " + text_two;
-            var rta = "La suma es: " + (parseInt(text_one) + parseInt(text_two));
+            var rta = "La suma es: " + (parseInt(text_one.value) + parseInt(text_two.value));
+            console.log(text_one.value + text_two.value)
             document.getElementById("print").innerText = rta;
         }
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesorias Js</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            background-color: rgb(173, 255, 255);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body onload="load_page()">
+    
+    <button onclick="reload_page()">CARGAR PÁGINA</button>
+    <div id="box" onmouseover="entry()" onmouseout="exit()"></div>
+    <br>
+    <input type="text" id="input_valOne" placeholder="Ingrese un dato" >
+    <input type="text" id="input_valTwo" placeholder="Ingrese un dato" >
+    <button id="btn_calculate">CALCULAR</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        const btn_calculate = document.querySelector("#btn_calculate");
+        const valOne        = document.querySelector("#input_valOne");
+        const valTwo        = document.querySelector("#input_valTwo");
+        
+        btn_calculate.addEventListener("click", event_name => {
+            let name = valOne.value + " " + valTwo.value;
+            name = name.toUpperCase();
+            alert(name);
+            console.log(name);
+        });
+
+        const box = document.querySelector("#box");
+
+        function load_page(){
+            Swal.fire({
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 2000,
+                title: 'BIEVENIDO',
+                text: 'Señor Usuario'
+            });
+        }
+
+        function reload_page(){
+            load_page();
+        }
+
+        function entry(){
+            document.body.style.backgroundColor = "#000";
+            box.style.backgroundColor = "#000";
+        }
+
+        function exit(){
+            document.body.style.backgroundColor = "#fff"
+            box.style.backgroundColor = "rgb(173, 255, 255)";
+        }
+    </script>
+</body>
+</html>
