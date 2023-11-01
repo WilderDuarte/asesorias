@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+        *{
+            margin: 0;
+        }
+        body{
+            background: #ffff88;
+            background: linear-gradient(360deg, rgba(255,255,136,1) 0%, rgba(118,255,115,1) 100%);
+            background-repeat: no-repeat;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            gap: 50px;
+        }
+        .card{
+            height: 400px;
+            width: 800px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card:hover{
+            transform: scale(1.1);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .photo{
+            width: 400px;
+            height: 350px;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .information{
+            width: 400px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            /* align-items: center; */
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 6px solid #3b3b3b;
+        }
+        h2{
+            text-align: center;
+        }
+        .images img{
+            width: 50px;
+            height: 50px;
+            border: none;
+            margin-top: 15px;
+        }
+        .images{
+            display: flex;
+        }
+        /* span{
+            text-align: center;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="photo">
+                <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" alt="">
+                <h2>Wilder Duarte</h2>
+            </div>
+            <div class="information">
+                <span>Es un docente de la universidad Francisco de Paula Santander Ocaña y dicta desarrollo web.</span>
+                <p>waduarten@ufpso.edu.co</p>
+                <div class="buttons">
+                    <button>Facebook</button>
+                    <button>Instagram</button>
+                    <button>Twitter</button>
+                </div>
+                <div class="images">
+                    <img src="football-regular-24.png" alt="">
+                    <img src="football-regular-24.png" alt="">
+                    <img src="football-regular-24.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

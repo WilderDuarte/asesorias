@@ -4,10 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        div#father{
+            height: 600px;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .sons{
+            height: 200px;
+            width: 200px;
+            border-radius: 10px;
+            background-color: #000;
+            background-image: url(https://s1.significados.com/foto/imagen-de-destaque-que-es-el-futbol.-jugadores-y-balon.jpg?class=ogImageSquare);
+            background-size: cover;
+            background-position: center;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            display: grid;
+            place-items: center;
+        }
+        .sons:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+            transition: all ease-in-out .8s;
+        }
+        #container_cards{
+            background-color: rgb(166, 143, 113);
+            height: 700px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: space-evenly;
+            padding: 10px 0;
+            align-items: center;
+        }
+        .cards{
+            width: 45%;
+            height: 120px;
+            background-color: beige;
+            border-radius: 15px; 
+            padding: 20px; 
+            display: flex;          
+            flex-wrap: nowrap;
+            align-items: center;
+            
+        }
+        .cards img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        .cards img:hover{
+            box-shadow: 0px 0px 10px 1px #000;
+            transform: scale(1.1);
+            transition: all ease-in-out .8s;
+            cursor: pointer;
+        }
+        .text_card{
+            margin-left: 10px;
+        }
+        h2, span{
+            font-family: 'Montserrat', sans-serif;
+        }
+        h2{
+            margin-bottom: 2px;
+        }
+    </style>
 </head>
 <body>
     <div>
         <h1>CLASS FLEXBOX</h1>
+    </div>
+    <div id="father">
+        <div class="sons"><h1>texto</h1></div>
+        <div class="sons"><h1>texto</h1></div>
+        <div class="sons"><h1>texto</h1></div>
+        <div class="sons"><h1>texto</h1></div>
+        <div class="sons"><h1>texto</h1></div>
+        <div class="sons"><h1>texto</h1></div>
+    </div>
+    <div id="container_cards">
+        <div class="cards">
+            <img src="https://media.licdn.com/dms/image/C4E03AQECJZd6e1gXqQ/profile-displayphoto-shrink_800_800/0/1648874804170?e=2147483647&v=beta&t=97BCf8TyYwGjBpHeuCckWuL3Pj1xL9Y4OJE-Q4H1xmY" alt="">
+            <div class="text_card">
+                <h2>Wilder Andrés Duarte Neira</h2>
+                <span>Ingeniero de Sistemas, docente de la UFPSO</span>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="https://media.licdn.com/dms/image/C4E03AQECJZd6e1gXqQ/profile-displayphoto-shrink_800_800/0/1648874804170?e=2147483647&v=beta&t=97BCf8TyYwGjBpHeuCckWuL3Pj1xL9Y4OJE-Q4H1xmY" alt="">
+            <div class="text_card">
+                <h2>Wilder Andrés Duarte Neira</h2>
+                <span>Ingeniero de Sistemas, docente de la UFPSO</span>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="https://media.licdn.com/dms/image/C4E03AQECJZd6e1gXqQ/profile-displayphoto-shrink_800_800/0/1648874804170?e=2147483647&v=beta&t=97BCf8TyYwGjBpHeuCckWuL3Pj1xL9Y4OJE-Q4H1xmY" alt="">
+            <div class="text_card">
+                <h2>Wilder Andrés Duarte Neira</h2>
+                <span>Ingeniero de Sistemas, docente de la UFPSO</span>
+            </div>
+        </div>
+        <div class="cards">
+            <img src="https://media.licdn.com/dms/image/C4E03AQECJZd6e1gXqQ/profile-displayphoto-shrink_800_800/0/1648874804170?e=2147483647&v=beta&t=97BCf8TyYwGjBpHeuCckWuL3Pj1xL9Y4OJE-Q4H1xmY" alt="">
+            <div class="text_card">
+                <h2>Wilder Andrés Duarte Neira</h2>
+                <span>Ingeniero de Sistemas, docente de la UFPSO</span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
